@@ -1,0 +1,14 @@
+.box{
+    width:70%;
+    height:500px;
+    background-color: aqua;
+    border-radius:50px 0% 0% 0%;
+    }
+    .footer{
+    width:70%;
+    height:60px;
+    background-color: blanchedalmond;
+    border-radius:0% 0% 10px 10px;
+    
+    }
+    
