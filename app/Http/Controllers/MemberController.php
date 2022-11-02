@@ -23,4 +23,17 @@ class MemberController extends Controller
 
     ]);
 }
+    public function create(){
+        return view('create',[
+            'title'=>'Create'
+        ]);
+    }
+    public function input(Request $data){
+        Member::create([
+            'nama'=>$data->nama,
+            'email'=>$data->email,
+            'kelas'=>$data->kelas
+        ]);
+        return redirect('/');
+    }
 }

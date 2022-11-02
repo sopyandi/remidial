@@ -15,7 +15,7 @@
         </div>
         <div class="footer">
             <br>
-           <button>Create</button>
+           <a href="/create"><button>Create</button></a>
            <button>Read</button>
            <button></button>
            <button></button>
