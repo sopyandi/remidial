@@ -16,9 +16,9 @@
         <div class="footer">
             <br>
            <a href="/create"><button>Create</button></a>
-           <button>Read</button>
-           <button></button>
-           <button></button>
+           <a href="/"><button>Read</button></a>
+           <button>Update</button>
+           <button>Delete</button>
         </div>
         </center>
     </body>
