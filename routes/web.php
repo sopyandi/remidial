@@ -22,5 +22,5 @@ Route::controller(MemberController::class)->group(function (){
 Route::get('/','read');
 Route::get('/create','create');
 Route::post('/create','input');
-Route::post('/','cari');
+Route::post('/cari','cari');
 });

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class MemberController extends Controller
 {
    public function read(){
-    return view('tampil-data',[
+    return view('member/tampil-data',[
         'title'=>'Tampildata',
         'models'=> Member::all()
     ]);
@@ -17,14 +17,14 @@ class MemberController extends Controller
     public function cari(Request $data){
     // return $data;
     $title = $data->objek;
-    return view('tampil-data',[
+    return view('member/tampil-data',[
         'title'=> $title,
         'models'=>Member::where('nama',$title)->get()
 
     ]);
 }
     public function create(){
-        return view('create',[
+        return view('member/create',[
             'title'=>'Create'
         ]);
     }

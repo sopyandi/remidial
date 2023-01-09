@@ -9,17 +9,14 @@
     </head>
     <body>
         <center>
-        <div class="box">
+            <div class="box">
             <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">UJIKOM</h1>
+            <hr>
             @yield('container')
-        </div>
-        <div class="footer">
+            <br><hr>
+            @include('partial/link')
             <br>
-           <a href="/create"><button>Create</button></a>
-           <a href="/"><button>Read</button></a>
-           <button>Update</button>
-           <button>Delete</button>
         </div>
-        </center>
+    </center>
     </body>
     </html>
