@@ -29,10 +29,16 @@ class MemberController extends Controller
         ]);
     }
     public function input(Request $data){
+        if($data->file('foto')){
+            $foto = $data->file('foto')->store('foto-member');
+        }else{
+            $foto='';
+        }
         Member::create([
             'nama'=>$data->nama,
             'email'=>$data->email,
-            'kelas'=>$data->kelas
+            'kelas'=>$data->kelas,
+            'foto'=>$foto
         ]);
         return redirect('/');
     }

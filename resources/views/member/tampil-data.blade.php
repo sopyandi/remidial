@@ -11,6 +11,7 @@
             <th>Nama</th>
             <th>Email</th>
             <th>Kelas</th>
+            <th>Foto</th>
             <th>Action</th>
         </tr>
         @foreach($models as $data)
@@ -19,6 +20,7 @@
             <td>{{$data->nama }}</td>
             <td>{{$data->email}}</td>
             <td>{{$data->kelas }}</td>
+            <td><img src="storage/{{$data->foto}}" alt=""></td>
             <td>
                 <a href=""><button>update</button></a>
                 <a href="/delete?kd={{ $data->id }}"><button>delete</button></a>
@@ -27,3 +29,10 @@
         @endforeach
     </table>
 @endsection
+<style>
+    img{
+        border-radius:10px;
+        width:100px;
+        height:50px;
+    }
+</style>
