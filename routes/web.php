@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,9 @@ Route::get('/','read');
 Route::get('/create','create');
 Route::post('/create','input');
 Route::post('/cari','cari');
+});
+route::controller(ProdukController::class)->group(function(){
+Route::get('/produk','read');
+Route::get('/create-produk','create');
+Route::post('/create-produk','input');
 });
