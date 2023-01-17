@@ -36,4 +36,8 @@ class ProdukController extends Controller
       ]);
       return redirect('/produk');
   }
+  public function delete($id){
+    $hapus = Produk::where('id',$id)->delete();
+    return redirect('/produk');
+}
 }

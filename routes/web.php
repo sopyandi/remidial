@@ -19,9 +19,11 @@ use App\Http\Controllers\KategoriController;
 Route::get('/i', function () {
     return view('welcome');
 });
-
+Route::get('/', function () {
+    return view('login');
+});
 Route::controller(MemberController::class)->group(function (){
-Route::get('/','read');
+Route::get('/member','read');
 Route::post('/cari','cari');
 Route::get('/create','create');
 Route::post('/create','input');
@@ -31,12 +33,11 @@ route::controller(ProdukController::class)->group(function(){
 Route::get('/produk','read');
 Route::get('/create-produk','create');
 Route::post('/create-produk','input');
-Route::post('/delelte-produk/{id}','delete');
+Route::get('/delete-produk/{id}','delete');
 });
 route::controller(KategoriController::class)->group(function(){
 Route::get('/kategori','read');
-Route::get('/create-Kategori','create');
+Route::get('/create-kategori','create');
 Route::post('/create-kategori','input');
-Route::post('/delelte-kategori/{id}','delete');
-
-    });
+Route::get('/delete-kategori/{id}','delete');
+});

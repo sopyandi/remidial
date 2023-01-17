@@ -40,11 +40,11 @@ class MemberController extends Controller
             'kelas'=>$data->kelas,
             'foto'=>$foto
         ]);
-        return redirect('/');
+        return redirect('/member');
     }
     public function delete($id){
     $hapus = Member::where('id',$id)->delete();
-    return redirect('/');
+    return redirect('/member');
 
     }
 }

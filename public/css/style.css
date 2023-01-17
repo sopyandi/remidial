@@ -1,12 +1,18 @@
 .box{
-    margin-top:2%;
+    /* margin-top:2%; */
     width:70%;
     height:auto;
     /* background-color: aqua; */
     border: 2px black solid;
     border-radius:50px 0% 50px 0%;
+    /* overflow-x: hidden; */
     }
-
+    .container{
+    /* background-color: aqua; */
+    width:100%;
+    height:450px;
+    overflow-x: hidden;
+    }
     .link button {
        transition: .7s ease;
        width:120px;
@@ -18,7 +24,7 @@
       background-color:rgb(218, 218, 139);
       width:130px;
       transition: .7s ease;
-   
+
       /* height:32px; */
 
     }
@@ -35,7 +41,7 @@
     width:70%;
     height:10%;
     background-color: blanchedalmond;
-    border-radius:0% 0% 10px 10px; 
+    border-radius:0% 0% 10px 10px;
     } */
 
      #create{

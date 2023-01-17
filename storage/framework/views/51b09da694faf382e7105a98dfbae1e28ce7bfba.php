@@ -3,7 +3,7 @@
     <?php echo csrf_field(); ?>
     <input type="text" name="objek"><input type="submit" value="CARI">
     </form>
-    <a href="/create-produk" style="margin-left:-400px;"><button id="create">Create ++</button></a>
+    <a href="/create-kategori" style="margin-left:-400px;"><button id="create">Create ++</button></a>
     <table border='1'>
         <tr>
             <th>No</th>
@@ -17,10 +17,10 @@
             <td><?php echo e($loop->iteration); ?></td>
             <td><?php echo e($data->kd_kategori); ?></td>
             <td><?php echo e($data->nama_kategori); ?></td>
-            <td><img src="storage/<?php echo e($data->gambar); ?>" alt=""></td>
+            <td><img src="storage/<?php echo e($data->foto); ?>" alt=""></td>
             <td>
                 <a href=""><button>update</button></a>
-                <a href="/delete?kd=<?php echo e($data->id); ?>"><button>delete</button></a>
+                <a href="/delete-kategori/<?php echo e($data->id); ?>"><button>delete</button></a>
             </td>
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

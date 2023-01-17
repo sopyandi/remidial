@@ -4,7 +4,7 @@
     @csrf
     <input type="text" name="objek"><input type="submit" value="CARI">
     </form>
-    <a href="/create-produk" style="margin-left:-400px;"><button id="create">Create ++</button></a>
+    <a href="/create-kategori" style="margin-left:-400px;"><button id="create">Create ++</button></a>
     <table border='1'>
         <tr>
             <th>No</th>
@@ -18,10 +18,10 @@
             <td>{{$loop->iteration }}</td>
             <td>{{$data->kd_kategori }}</td>
             <td>{{$data->nama_kategori}}</td>
-            <td><img src="storage/{{$data->gambar}}" alt=""></td>
+            <td><img src="storage/{{$data->foto}}" alt=""></td>
             <td>
                 <a href=""><button>update</button></a>
-                <a href="/delete?kd={{ $data->id }}"><button>delete</button></a>
+                <a href="/delete-kategori/{{ $data->id }}"><button>delete</button></a>
             </td>
         </tr>
         @endforeach

@@ -12,11 +12,14 @@
             <div class="box">
             <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">UJIKOM</h1>
             <hr>
+            <div class="container">
             <?php echo $__env->yieldContent('container'); ?>
+            </div>
             <br><hr>
             <?php echo $__env->make('partial/link', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
             <br>
         </div>
     </center>
     </body>
-    </html><?php /**PATH C:\Users\Username\Desktop\ujikom\resources\views/layouts/main.blade.php ENDPATH**/ ?>
+    </html>
+<?php /**PATH C:\Users\Username\Desktop\ujikom\resources\views/layouts/main.blade.php ENDPATH**/ ?>

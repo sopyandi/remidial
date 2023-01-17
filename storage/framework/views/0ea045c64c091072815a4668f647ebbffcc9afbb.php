@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('container'); ?>
     <form action="/" method="POST">
     <?php echo csrf_field(); ?>
@@ -27,7 +26,7 @@
             <td><?php echo e($data->kd_kategori); ?></td>
             <td>
                 <a href=""><button>update</button></a>
-                <a href="/delete?kd=<?php echo e($data->id); ?>"><button>delete</button></a>
+                <a href="/delete-produk/<?php echo e($data->id); ?>"><button>delete</button></a>
             </td>
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -40,4 +39,5 @@
         height:50px;
     }
 </style>
+
 <?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Username\Desktop\ujikom\resources\views/produk/tampil-data.blade.php ENDPATH**/ ?>

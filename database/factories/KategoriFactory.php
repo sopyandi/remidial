@@ -19,7 +19,7 @@ class KategoriFactory extends Factory
         return [
             'kd_kategori' => 'k001',
             'nama_kategori' => 'makanan',
-            'gambar' => 'img/guest.png'
+            'foto' => 'img/guest.png'
         ];
     }
 }

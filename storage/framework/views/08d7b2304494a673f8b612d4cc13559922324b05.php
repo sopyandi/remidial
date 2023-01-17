@@ -1,7 +1,6 @@
-@extends('layouts/main')
-@section('container')
+<?php $__env->startSection('container'); ?>
 <form action="/create-kategori" method="POST" enctype="multipart/form-data">
-@csrf
+<?php echo csrf_field(); ?>
 <table>
     <tr>
         <td>Kode Kategori</td>
@@ -21,4 +20,6 @@
     </tr>
 </table>
 </form>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Username\Desktop\ujikom\resources\views/kategori/create.blade.php ENDPATH**/ ?>

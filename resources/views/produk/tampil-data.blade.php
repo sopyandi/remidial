@@ -27,7 +27,7 @@
             <td>{{$data->kd_kategori }}</td>
             <td>
                 <a href=""><button>update</button></a>
-                <a href="/delete?kd={{ $data->id }}"><button>delete</button></a>
+                <a href="/delete-produk/{{ $data->id }}"><button>delete</button></a>
             </td>
         </tr>
         @endforeach

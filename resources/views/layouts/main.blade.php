@@ -12,7 +12,9 @@
             <div class="box">
             <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">UJIKOM</h1>
             <hr>
+            <div class="container">
             @yield('container')
+            </div>
             <br><hr>
             @include('partial/link')
             <br>
