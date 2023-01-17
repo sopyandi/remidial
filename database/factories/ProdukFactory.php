@@ -17,10 +17,12 @@ class ProdukFactory extends Factory
     public function definition()
     {
         return [
-            'nama' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'kelas' => 'rpl',
-            'foto'  => 'img/guest.png'
+            'kd_produk' => 'KD099',
+            'nama_produk' => 'Makaroni',
+            'harga' => '100000',
+            'deskripsi'  => 'Ini Adalah Makanan Ringan',
+            'gambar' => 'img/guest.png',
+            'kd_kategori' => '3'
         ];
     }
 }

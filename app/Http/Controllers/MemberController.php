@@ -42,4 +42,9 @@ class MemberController extends Controller
         ]);
         return redirect('/');
     }
+    public function delete($id){
+    $hapus = Member::where('id',$id)->delete();
+    return redirect('/');
+
+    }
 }
