@@ -9,8 +9,8 @@
     </head>
     <body>
         <center>
-            <div class="box">
-            <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">UJIKOM</h1>
+        <div class="box">
+            <?php echo $__env->make('partial/head', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
             <hr>
             <div class="container">
             <?php echo $__env->yieldContent('container'); ?>
@@ -22,4 +22,9 @@
     </center>
     </body>
     </html>
+<style>
+    b{
+        color: red;
+    }
+</style>
 <?php /**PATH C:\Users\Username\Desktop\ujikom\resources\views/layouts/main.blade.php ENDPATH**/ ?>

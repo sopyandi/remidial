@@ -13,18 +13,19 @@
     <h1>Halaman Login</h1>
     <div class="box">
         <br><br><br>
-    <form action="">
+    <form action="/login" method="post">
+        <?php echo csrf_field(); ?>
         <table>
             <tr>
-                <td>Username </td>
-                <td><input type="text" name="username"></td>
+                
+                <td><input type="text" name="email" id="input" placeholder="Username"></td>
             </tr>
             <tr>
-                <td>Password </td>
-                <td><input type="password" name="password"></td>
+                
+                <td><input type="password" name="password" id="input" placeholder="Password"></td>
             </tr>
             <tr>
-                <td></td>
+                
                 <td>
                 <a href="/member"><input type="submit" value="Login"></a>
                 <a href="/member">member</a>
@@ -32,9 +33,19 @@
             </tr>
         </table>
     </form>
-    <br><br><br>
-
 </div>
 </body>
 </html>
+<style>
+    form{
+        margin-top:15%;
+        margin-bottom:15%;
+    }
+    #input{
+        text-align: center;
+        width:100%;
+        height:40px;
+        /* border-radius: 30%; */
+    }
+</style>
 <?php /**PATH C:\Users\Username\Desktop\ujikom\resources\views/login.blade.php ENDPATH**/ ?>

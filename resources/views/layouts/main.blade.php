@@ -9,8 +9,8 @@
     </head>
     <body>
         <center>
-            <div class="box">
-            <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">UJIKOM</h1>
+        <div class="box">
+            @include('partial/head')
             <hr>
             <div class="container">
             @yield('container')
@@ -22,3 +22,8 @@
     </center>
     </body>
     </html>
+<style>
+    b{
+        color: red;
+    }
+</style>
