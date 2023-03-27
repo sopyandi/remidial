@@ -1,7 +1,7 @@
-@extends('layouts/main')
-@section('container')
+
+<?php $__env->startSection('container'); ?>
 <form action="/create-produk" method="POST" enctype="multipart/form-data">
-@csrf
+<?php echo csrf_field(); ?>
 <table>
     <tr>
         <td>kode produk</td>
@@ -41,4 +41,5 @@
     </tr>
 </table>
 </form>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Lenovo\Desktop\remedial_0051044626\resources\views/produk/create.blade.php ENDPATH**/ ?>
