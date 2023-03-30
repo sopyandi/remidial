@@ -19,9 +19,9 @@ class DatabaseSeeder extends Seeder
     {
         // Penjualan::factory(3)->create();
 
-       Total::create([
-        'id'=> '1',
-        'total' =>'0',
-        ]);
+    //    Total::create([
+    //     'id'=> '1',
+    //     'total' =>'0',
+    //     ]);
     }
 }

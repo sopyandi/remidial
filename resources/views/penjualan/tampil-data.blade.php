@@ -30,7 +30,7 @@
     <table border="1">
     <tr>
         <td width="363px">Total :</td>
-        <td width="100px"><p style="color:red;">Rp.{{$total->total}}-,</p> </td>
+        <td width="100px"><p style="color:red;">Rp.{{$total}}-,</p> </td>
     </tr>
 </table>
 @endsection

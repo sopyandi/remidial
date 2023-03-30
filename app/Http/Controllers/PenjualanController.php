@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Penjualan;
 use App\Models\Total;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class PenjualanController extends Controller
@@ -15,7 +16,7 @@ class PenjualanController extends Controller
       return view('penjualan/tampil-data',[
           'title'=>'Tampildata',
           'models'=>Penjualan::all(),
-          'total'=>Total::find(1)
+          'total'=> Penjualan::sum('sub_total')
       ]);
     }
     //TAMBAH DATA PENJUALAN
@@ -34,12 +35,6 @@ class PenjualanController extends Controller
             'jumlah_beli'=>$data->jumlah_beli,
             'sub_total'=>$sub_total,
         ]);
-       $total = Total::find(1);
-       $total_lama = $total->total;
-       $total_baru = $sub_total + $total_lama;
-       Total::find(1)->update([
-        'total' => $total_baru
-       ]);
         return redirect('/');
     }
     //EDIT DATA PENJUALAN
@@ -60,23 +55,10 @@ class PenjualanController extends Controller
         'jumlah_beli'=>$data->jumlah_beli,
         'sub_total'=>$sub_total
     ]);
-    $total_sekarang = Total::find(1);
-    $total_baru = $total_sekarang->total - $data->total_sebelumnya + $sub_total;
-    Total::where('id',1)->update([
-        'total' => $total_baru
-    ]);
     return redirect('/');
     }
     //HAPUS DATA PENJUALAN
     public function delete($id){
-        $penjualan = Penjualan::find($id);
-
-        $total = Total::find(1);
-        $total_lama = $total->total;
-        $total_baru = $total_lama - $penjualan->sub_total;
-        Total::find(1)->update([
-         'total' => $total_baru
-        ]);
       $hapus = Penjualan::where('id',$id)->delete();
       return redirect('/');
   }

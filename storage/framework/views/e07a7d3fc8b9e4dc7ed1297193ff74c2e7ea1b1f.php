@@ -2,23 +2,23 @@
 <?php $__env->startSection('container'); ?>
 <form action="/edit-penjualan" method="POST" enctype="multipart/form-data">
 <?php echo csrf_field(); ?>
-<input type="hidden" name="total_sebelumnya" value="<?php echo e($penjualan->sub_total); ?>">
+<input type="hidden" name="id" value="<?php echo e($penjualan->id); ?>">
 <table>
     <tr>
         <td>Nama Barang</td>
-        <td>: <input type="text" name="nmbarang" placeholder="<?php echo e($penjualan->nmbarang); ?>" required></td>
+        <td>: <input type="text" name="nmbarang" value="<?php echo e($penjualan->nmbarang); ?>" required></td>
     </tr>
     <tr>
         <td>Nama Pembeli</td>
-        <td>: <input type="text" name="nmpembeli" placeholder="<?php echo e($penjualan->nmpembeli); ?>" required></td>
+        <td>: <input type="text" name="nmpembeli" value="<?php echo e($penjualan->nmpembeli); ?>" required></td>
     </tr>
     <tr>
         <td>harga</td>
-        <td>: <input type="number" name="harga" placeholder="<?php echo e($penjualan->harga); ?>" required></td>
+        <td>: <input type="number" name="harga" value="<?php echo e($penjualan->harga); ?>" required></td>
     </tr>
     <tr>
         <td>Jumlah Beli</td>
-        <td>: <input type="number" name="jumlah_beli" placeholder="<?php echo e($penjualan->jumlah_beli); ?>" required></td>
+        <td>: <input type="number" name="jumlah_beli" value="<?php echo e($penjualan->jumlah_beli); ?>" required></td>
     </tr>
     <tr>
         <td></td>
